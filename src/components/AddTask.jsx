@@ -25,8 +25,11 @@ const AddTask = () => {
             toast('Added task successful')
             console.log(data)
         })
-
-        
+        e.target.name.value="";
+        e.target.photo.value="";
+        e.target.price.value="";
+        e.target.description.value="";
+        setStatus(' ')
     }
     return (
 
@@ -37,17 +40,17 @@ const AddTask = () => {
                 <div className=' w-1/2 mx-auto '>
 
                   
-                        <input type="text" name='name' placeholder="Task Name" className="input input-bordered input-primary w-full  mb-3" />
+                        <input required type="text" name='name' placeholder="Task Name" className="input input-bordered input-primary w-full  mb-3 " />
                         <input type="text" name='photo'placeholder='photo URL'  className="input  input-bordered input-primary w-full mb-3" />
-                        <select onChange={(e) => setStatus(e.target.value)} className="select select-primary w-full mb-3" >
+                        <select required onChange={(e) => setStatus(e.target.value)} className="select select-primary w-full mb-3" >
                             <option disabled selected>status</option>
                             <option value='processing'>processing</option>
                             <option value='pending'>pending</option>
                             <option value='completed'>completed</option>
 
                         </select>
-                        <input type="text" name='price' placeholder="Price" className="input input-bordered input-primary w-full mb-3  " />
-                        <textarea name='description' className="textarea textarea-primary w-full" placeholder="Description"></textarea>
+                        <input required type="text" name='price' placeholder="Price" className="input input-bordered input-primary w-full mb-3  " />
+                        <textarea required name='description' className="textarea textarea-primary w-full" placeholder="Description"></textarea>
                         <input className='w-full bg-[#4070ff] rounded-xl py-3 text-white' type="submit" value="ADD TASK" />
                    
                 </div>

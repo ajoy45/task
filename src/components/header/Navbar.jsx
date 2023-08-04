@@ -19,7 +19,7 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <Link to='/addTask'><li className='text-xl text-white '><a>ADD TASK</a></li></Link>
-                    <li className='text-xl text-white '><a>MY TASK</a></li>
+                    <Link to='/myTask'><li className='text-xl text-white '><a>MY TASK</a></li></Link>
                 </ul>
             </div>
             <div className="navbar-end">
