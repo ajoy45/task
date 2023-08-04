@@ -1,13 +1,17 @@
+import { Outlet } from "react-router-dom"
+import Navbar from "./components/header/Navbar"
+
 
 
 function App() {
-  
-
   return (
-    <>
-      <h1 className="text-red-500">hello world</h1>
-      <button className="btn btn-primary">Primary</button>
-    </>
+    <div className="px-12">
+       {/* header */}
+       <Navbar></Navbar>
+       {/* main content */}
+       <Outlet></Outlet>
+       
+    </div>
   )
 }
 
