@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const Navbar = () => {
     return (
         <div className="navbar bg-[#4070ff]">
@@ -15,7 +14,7 @@ const Navbar = () => {
                         
                     </ul>
                 </div>
-                <a className="font-serif font-bold text-2xl">Task Management</a>
+               <Link to='/'> <a className="font-serif font-bold text-2xl">Task Management</a></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

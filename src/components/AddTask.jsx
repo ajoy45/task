@@ -12,7 +12,7 @@ const AddTask = () => {
             name,price,photoURL,description,status:status
         }
         console.log(taskInfo)
-        fetch('http://localhost:5000/add-task',{
+        fetch('https://task-server-ajoy45.vercel.app/add-task',{
             method:"POST",
             headers:{
                 "content-type":"application/json"

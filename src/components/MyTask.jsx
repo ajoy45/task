@@ -7,7 +7,7 @@ const MyTask = () => {
     console.log(myTasks)
     const handelUpdate = (id) => {
         console.log(id)
-        fetch(`http://localhost:5000/add-task/${id}`, {
+        fetch(`https://task-server-ajoy45.vercel.app/add-task/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 status: "completed"
@@ -19,7 +19,7 @@ const MyTask = () => {
             .then((response) => response.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-                    fetch('http://localhost:5000/all-task')
+                    fetch('https://task-server-ajoy45.vercel.app/all-task')
                         .then(res => res.json())
                         .then(data => setMyTAsk(data))
                         toast('update successfully')
@@ -28,13 +28,13 @@ const MyTask = () => {
     }
     const handelDelete = (id) => {
         console.log(id)
-        fetch(`http://localhost:5000/add-task/${id}`, {
+        fetch(`https://task-server-ajoy45.vercel.app/add-task/${id}`, {
             method: 'DELETE',
         })
         .then(res=>res.json())
         .then(data=>{
             if(data.deletedCount>0){
-                fetch('http://localhost:5000/all-task')
+                fetch('https://task-server-ajoy45.vercel.app/all-task')
                 .then(res => res.json())
                 .then(data => setMyTAsk(data))
                 toast('delete successfully')
@@ -42,7 +42,7 @@ const MyTask = () => {
         })
     }
     useEffect(() => {
-        fetch('http://localhost:5000/all-task')
+        fetch('https://task-server-ajoy45.vercel.app/all-task')
             .then(res => res.json())
             .then(data => setMyTAsk(data))
     }, [])
