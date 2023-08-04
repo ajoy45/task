@@ -22,7 +22,7 @@ const AddTask = () => {
         })
         .then(res=>res.json)
         .then(data=>{
-            toast('Added toy successful')
+            toast('Added task successful')
             console.log(data)
         })
 
